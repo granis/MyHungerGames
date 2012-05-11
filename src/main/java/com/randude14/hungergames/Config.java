@@ -123,6 +123,10 @@ public class Config {
 	public static String getReloadWorldNameGlobal() {
 		return plugin.getConfig().getString("global.reload-world-name", RELOAD_WORLD_NAME.getString());
 	}
+		
+	public static boolean getResetChangesGlobal() {
+		return plugin.getConfig().getBoolean("global.reset-changes", RELOAD_WORLD.getBoolean());
+	}
 	
 	public static Map<ItemStack, Float> getGlobalChestLoot() {
 		plugin.reloadConfig();
@@ -240,6 +244,10 @@ public class Config {
 	
 	public static String getReloadWorldName(String setup) {
 		return plugin.getConfig().getString("setups." + setup + ".reload-world-name", getReloadWorldNameGlobal());
+	}
+		
+	public static boolean getResetChanges(String setup) {
+		return plugin.getConfig().getBoolean("setups." + setup + ".reset-changes", getResetChangesGlobal());
 	}
 	
 	@SuppressWarnings("unchecked")

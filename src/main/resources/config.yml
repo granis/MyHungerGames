@@ -65,6 +65,9 @@ global:
   # Reload world on game end. Recommended that this be false and have setups override this
   reload-world: false
   
+  # Reset block changes after a game ends
+  reset-changes: false
+  
   chest-loot:
   # Example loot. Note DURABIlITY is an enchantment
   #    DIAMOND_PICKAXE:
